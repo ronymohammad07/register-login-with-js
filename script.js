@@ -136,13 +136,13 @@ function LogIn() {
 
     const LoginUser = localStorage.getItem(InputGmail);
 
-    console.log(LoginUser);
-
     if (!LoginUser) {
         alert('User not exist!')
     }
 
     const BackInfo = JSON.parse(LoginUser);
+    
+
     if (InputPassword != BackInfo.UserPassword) {
         alert('Incorrect Password.')
         return;
